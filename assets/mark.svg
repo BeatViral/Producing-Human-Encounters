@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+  <rect width="180" height="180" rx="30" fill="#073b40"/>
+  <text x="90" y="112" text-anchor="middle" fill="#fff5e3" font-family="Georgia,serif" font-weight="bold" font-size="56">PHE</text>
+  <path d="M44 128h92" stroke="#efbc8f" stroke-width="4"/>
+</svg>
