@@ -74,33 +74,33 @@
         <p>Have you built something remarkable, overcome a challenge, made a discovery, helped others, or learned something worth passing on? We’d love to hear from you.</p>
       </div>
       <div class="responses">
-        <details data-kind="participate">
+        <details>
           <summary>I’d Love to Participate</summary>
-          <form aria-label="Expression of interest">
+          <form method="post" aria-label="Expression of interest">
+            <input type="hidden" name="_subject" value="Producing Human Encounters | Expression of interest">
             <label>Your name<input name="name" autocomplete="name" required></label>
             <label>Your email<input name="email" type="email" autocomplete="email" required></label>
             <label>Town or location<input name="location" autocomplete="address-level2" required></label>
             <label>What would you like to share?<textarea name="message" rows="4" required></textarea></label>
             <label class="consent"><input name="consent" type="checkbox" required> I agree to be contacted about the series.</label>
-            <p class="form-note"></p>
-            <button class="button" type="submit">Prepare my introduction</button>
-            <p class="status" role="status"></p>
+            <p class="form-note">FormSubmit forwards your details to the organisers so they can reply.</p>
+            <button class="button" type="submit" disabled>Send my introduction</button>
           </form>
         </details>
-        <details data-kind="nominate">
+        <details>
           <summary>Nominate Someone Extraordinary</summary>
-          <form aria-label="Nomination">
+          <form method="post" aria-label="Nomination">
+            <input type="hidden" name="_subject" value="Producing Human Encounters | Nomination">
             <label>Your name<input name="name" autocomplete="name" required></label>
             <label>Your email<input name="email" type="email" autocomplete="email" required></label>
             <label>Town or location<input name="location" autocomplete="address-level2" required></label>
             <label>Who would you nominate and why?<textarea name="message" rows="4" required></textarea></label>
             <label class="consent"><input name="consent" type="checkbox" required> I agree to be contacted about this nomination.</label>
-            <p class="form-note"></p>
-            <button class="button" type="submit">Prepare my nomination</button>
-            <p class="status" role="status"></p>
+            <p class="form-note">FormSubmit forwards your details to the organisers so they can reply.</p>
+            <button class="button" type="submit" disabled>Send my nomination</button>
           </form>
         </details>
-        <noscript>Please enable JavaScript to prepare an expression of interest.</noscript>
+        <noscript>Please enable JavaScript to send an expression of interest or nomination.</noscript>
       </div>
     </div>
   </section>

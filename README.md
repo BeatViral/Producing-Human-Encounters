@@ -14,6 +14,6 @@ Run `python -m http.server 8000` from the repository root and open http://localh
 
 ## Update the series
 
-Edit `config.js` for event information, the participation target and contact, social and ticket links. Set `contactEmail` to the approved public inbox to enable email drafts for introductions and nominations. With no inbox configured, visitors can download a personal copy of their form. This static site stores no submissions.
+Edit `config.js` for event information, the participation target and contact, social and ticket links. Both forms post to FormSubmit, which forwards enquiries to the inbox in `contactEmail`. The first test submission triggers an activation email. Activate forwarding from that inbox, then submit one test through each live form and check for both emails before outreach. Repeat activation if the inbox changes.
 
 Portraits and the landscape scene were cropped from the supplied approved poster. When the public URL is confirmed, generate the QR code and save it as `assets/series-qr.svg`. Reserve a clear, light area on the print poster for the code and its quiet zone, and scan a print proof before distribution.

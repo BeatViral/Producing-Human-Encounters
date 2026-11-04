@@ -7,7 +7,7 @@ export default {
     { title: 'Gathering Three', status: 'Coming Soon' },
     { title: 'Gathering Four', status: 'Coming Soon' },
   ],
-  contactEmail: '',
+  contactEmail: 'mahmoodkhanteam@gmail.com',
   socialUrl: '',
   ticketsUrl: '',
 };
