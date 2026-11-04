@@ -29,3 +29,9 @@ for (const form of document.querySelectorAll('.responses form')) {
   form.action = 'https://formsubmit.co/' + config.contactEmail;
   form.querySelector('button').disabled = false;
 }
+
+if (config.contactEmail) {
+  const fallback = document.querySelector('#enquiry-fallback');
+  fallback.querySelector('a').href = 'mailto:' + config.contactEmail;
+  fallback.hidden = false;
+}
