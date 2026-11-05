@@ -1,19 +1,26 @@
 # Producing Human Encounters
 
-Static website for the inaugural Mullumbimby Series.
+Static national website and eight city-series pages for GitHub Pages.
 
-## Preview
+## Edit and preview
 
-Run `python -m http.server 8000` from the repository root and open http://localhost:8000.
+1. Edit copy and city entries in `build_site.py`. Set the shared enquiry address in `site-config.json`.
+2. Run `python build_site.py` to regenerate the homepage, eight city pages and sitemap.
+3. Run `python -m http.server 8000` from the repository root and open http://localhost:8000.
+4. When ready to publish, commit the source and generated files and push to `main`. GitHub Pages serves `main` from the repository root.
 
-## Publish on GitHub Pages
+The three enquiry links open addressed drafts with city-specific subjects. The visitor reviews and sends the draft from their email app.
 
-1. Push to the repository’s `main` branch.
-2. Under **Settings → Pages**, choose **Deploy from a branch**, then **main** and **/ (root)**.
-3. After deployment, open the URL shown in Pages settings. If you use a different domain or repository name, update the Open Graph image URL in `index.html`.
+## Replace artwork
 
-## Update the series
+Keep the supplied PNG originals in `assets/posters/` under their existing names. Update each matching full-size WebP (up to 900 px wide), city tile WebP (450 px wide), and 1200 × 630 JPEG share card. Update the national hero portrait crops in `assets/national-left.webp` and `assets/national-right.webp`, and the gathering crop in `assets/national-gathering.webp` when replacing the national poster. Keep the posters intact in the full WebP and downloadable PNG. Use landscape or gathering details for share crops and keep QR graphics out of those crops.
 
-Edit `config.js` for event information, the participation target and contact, social and ticket links. Both forms post to FormSubmit, which forwards enquiries to the inbox in `contactEmail`. The first test submission triggers an activation email. Activate forwarding from that inbox, then submit one test through each live form and check for both emails before outreach. Repeat activation if the inbox changes.
+## Connect the permanent domain when ready
 
-Portraits and the landscape scene were cropped from the supplied approved poster. When the public URL is confirmed, generate the QR code and save it as `assets/series-qr.svg`. Reserve a clear, light area on the print poster for the code and its quiet zone, and scan a print proof before distribution.
+1. After securing `producinghumanencounters.com`, verify it in the BeatViral account’s **Settings → Pages** using the DNS TXT record GitHub supplies.
+2. In this repository’s **Settings → Pages → Custom domain**, enter `producinghumanencounters.com` and save.
+3. At the DNS provider, point the apex (`@`) to GitHub Pages with four A records: `185.199.108.153`, `185.199.109.153`, `185.199.110.153` and `185.199.111.153`. For `www`, add a CNAME to `beatviral.github.io`. Keep the verification TXT record.
+4. Wait for the Pages DNS and certificate checks. Enable **Enforce HTTPS** when available and check the homepage and city URLs over HTTPS.
+5. Change `siteUrl` in `site-config.json` to `https://producinghumanencounters.com/`, run `python build_site.py`, and publish the generated canonical URLs, social metadata and sitemap. Verify the poster QR codes open the live homepage before distributing them.
+
+See [GitHub’s custom domain documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site) for DNS verification and troubleshooting.

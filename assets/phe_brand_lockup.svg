@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 120" role="img" aria-label="PHE — Producing Human Encounters">
+  <title>PHE — Producing Human Encounters</title>
+  <path d="M20 79 Q70 13 120 79" fill="none" stroke="#9f4328" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="48" cy="47" r="11" fill="#093c41"/>
+  <circle cx="72" cy="33" r="13" fill="#a63f23"/>
+  <circle cx="96" cy="47" r="11" fill="#093c41"/>
+  <path d="M24 82 Q47 53 70 84 Q93 53 117 82" fill="none" stroke="#093c41" stroke-width="10" stroke-linecap="round"/>
+  <path d="M139 23 L139 94" stroke="#a63f23" stroke-width="2"/>
+  <text x="154" y="81" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="61" fill="#093c41">PHE</text>
+</svg>
