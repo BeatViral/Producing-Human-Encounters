@@ -119,11 +119,7 @@ def build_page(city=None):
     <section class="section wrap" aria-labelledby="other-cities">
       <p class="eyebrow">Across Australia</p><h2 id="other-cities">Explore other cities</h2>
       <div class="related">{related}</div>
-    </section>''' if city else f'''
-    <section class="section wrap national-poster" aria-labelledby="poster-title">
-      <div><p class="eyebrow">The national artwork</p><h2 id="poster-title">Stories worth sharing.</h2>
-      <p>Take a closer look at the artwork for Producing Human Encounters.</p></div>{poster}
-    </section>'''
+    </section>''' if city else ""
     contact = "".join(f'<a href="{email_link(label, place, body)}">{escape(label)} <span aria-hidden="true">↗</span></a>' for label, body in ACTIONS.items())
     partner = email_link("Venue and Community Partners", place, "I’d like to talk about working with Producing Human Encounters.\n\nMy name and organisation: \nMy idea: ")
     return f'''<!doctype html>
